@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shomrita Barua, BDS, MPH(c) — Public Health & Policy Portfolio</title>
+<meta name="description" content="Portfolio of Shomrita Barua — public health professional focused on health equity, policy analysis, language access, and culturally responsive community-based research." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #1f3a5f;
+    --navy-deep: #14273f;
+    --teal: #2e7d5b;
+    --teal-deep: #1f5a3f;
+    --sand: #f6f1e7;
+    --cream: #fbf8f1;
+    --ink: #1c2330;
+    --muted: #5a6577;
+    --line: #d9d3c5;
+    --gold: #c9a449;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: 'Source Serif Pro', Georgia, serif; color: var(--navy); margin: 0 0 .5em; line-height: 1.25; }
+  h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 700; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  p { margin: 0 0 1em; }
+  a { color: var(--teal-deep); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--navy); }
+
+  /* ========== Nav ========== */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(251,248,241,.92);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 14px 28px;
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  }
+  .brand { font-family: 'Source Serif Pro', serif; font-weight: 700; color: var(--navy); font-size: 1.05rem; letter-spacing: .2px; }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a {
+    color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500;
+    padding: 6px 2px; border-bottom: 2px solid transparent; transition: border-color .2s, color .2s;
+  }
+  .nav-links a:hover { color: var(--navy); border-color: var(--gold); }
+  @media (max-width: 640px) {
+    .nav-links { gap: 12px; font-size: .85rem; }
+    .nav-links a { font-size: .82rem; }
+  }
+
+  /* ========== Hero ========== */
+  .hero {
+    background: linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color: #fff; padding: 80px 28px 90px;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -120px; top: -120px;
+    width: 380px; height: 380px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(201,164,73,.18), transparent 70%);
+  }
+  .hero::before {
+    content: ""; position: absolute; left: -80px; bottom: -100px;
+    width: 280px; height: 280px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(46,125,91,.22), transparent 70%);
+  }
+  .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+  @media (min-width: 880px) { .hero-inner { grid-template-columns: 1.4fr 1fr; gap: 60px; } }
+  .hero h1 { color: #fff; }
+  .hero .eyebrow {
+    display: inline-block; padding: 5px 14px; border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px; font-size: .78rem; letter-spacing: 1.4px; text-transform: uppercase;
+    color: #f3e8c8; margin-bottom: 18px;
+  }
+  .hero .role { font-family: 'Source Serif Pro', serif; font-style: italic; color: #f3e8c8; font-size: 1.2rem; margin: -6px 0 18px; }
+  .hero .lede { font-size: 1.08rem; color: rgba(255,255,255,.92); max-width: 56ch; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .btn {
+    display: inline-block; padding: 11px 22px; border-radius: 6px;
+    font-weight: 600; font-size: .95rem; text-decoration: none;
+    transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .btn-primary { background: var(--gold); color: var(--navy-deep); }
+  .btn-primary:hover { background: #d8b455; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+  .btn-ghost:hover { background: rgba(255,255,255,.1); }
+
+  .id-card {
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18);
+    border-radius: 10px; padding: 22px 26px; backdrop-filter: blur(6px);
+    color: #f1ede0;
+  }
+  .id-card h4 { color: #f3e8c8; margin: 0 0 10px; font-size: .82rem; letter-spacing: 1.3px; text-transform: uppercase; font-family: 'Inter', sans-serif; font-weight: 600; }
+  .id-card .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,.15); font-size: .92rem; }
+  .id-card .row:last-child { border: 0; }
+  .id-card .row span:first-child { color: rgba(255,255,255,.65); }
+  .id-card a { color: #f3e8c8; }
+
+  /* ========== Sections ========== */
+  section {
+    padding: 80px 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+    scroll-margin-top: 80px;
+  }
+  .eyebrow-section {
+    color: var(--teal-deep); font-size: .82rem; letter-spacing: 1.6px;
+    text-transform: uppercase; font-weight: 600; margin-bottom: 8px;
+  }
+  .section-title { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
+  .section-title::after {
+    content: ""; flex: 1; height: 1px; background: var(--line);
+  }
+  .section-lede { color: var(--muted); font-size: 1.05rem; max-width: 70ch; margin-bottom: 36px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 36px; }
+  @media (min-width: 800px) { .about-grid { grid-template-columns: 2fr 1fr; gap: 50px; } }
+  .about-grid p { font-size: 1.04rem; }
+  .pillars { background: var(--sand); border-left: 4px solid var(--gold); padding: 24px 26px; border-radius: 0 8px 8px 0; }
+  .pillars h4 { font-size: .82rem; text-transform: uppercase; letter-spacing: 1.4px; color: var(--navy); margin-bottom: 10px; font-family: 'Inter', sans-serif; }
+  .pillars ul { margin: 0; padding-left: 18px; }
+  .pillars li { margin: 6px 0; color: var(--ink); font-size: .96rem; }
+
+  /* Capstone */
+  .capstone {
+    background: linear-gradient(150deg, #ffffff 0%, var(--cream) 100%);
+    border: 1px solid var(--line); border-radius: 12px;
+    padding: 36px;
+    box-shadow: 0 4px 22px rgba(31,58,95,.06);
+  }
+  .capstone .meta {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+  }
+  .tag {
+    display: inline-block; background: var(--sand); color: var(--navy);
+    padding: 4px 12px; border-radius: 999px; font-size: .78rem;
+    font-weight: 500; border: 1px solid var(--line);
+  }
+  .tag.accent { background: rgba(46,125,91,.1); color: var(--teal-deep); border-color: rgba(46,125,91,.25); }
+  .capstone-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 24px; }
+  @media (min-width: 760px) { .capstone-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .capstone-block h4 { color: var(--navy); margin-bottom: 8px; font-family: 'Source Serif Pro', serif; font-size: 1.1rem; }
+  .capstone-block ul { margin: 0; padding-left: 20px; }
+  .capstone-block li { margin: 6px 0; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: 1fr; gap: 22px; }
+  @media (min-width: 700px) { .cards { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .cards { grid-template-columns: 1fr 1fr 1fr; } }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 10px;
+    padding: 24px; transition: transform .2s ease, box-shadow .25s ease;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(31,58,95,.1); }
+  .card .visual {
+    height: 180px; border-radius: 6px; overflow: hidden; position: relative;
+    display: flex; align-items: center; justify-content: center; color: #fff;
+    font-family: 'Source Serif Pro', serif; font-size: 1.05rem;
+    text-align: center; padding: 16px; line-height: 1.3;
+    background: #1f3a5f;
+  }
+  .card .visual img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+  .card:hover .visual img { transform: scale(1.04); }
+  .v1 { background: linear-gradient(135deg, #1f3a5f, #2e7d5b); }
+  .v2 { background: linear-gradient(135deg, #2e7d5b, #c9a449); }
+  .v3 { background: linear-gradient(135deg, #14273f, #1f3a5f); }
+  .v4 { background: linear-gradient(135deg, #c9a449, #8a6b1f); }
+  .v5 { background: linear-gradient(135deg, #5d3a8a, #1f3a5f); }
+  .v6 { background: linear-gradient(135deg, #1f5a3f, #14273f); }
+  .card h3 { margin: 6px 0 4px; font-family: 'Source Serif Pro', serif; }
+  .card .desc { color: var(--muted); font-size: .95rem; flex: 1; }
+  .card .meta-line { font-size: .78rem; color: var(--teal-deep); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600; }
+  .card-cta { font-size: .88rem; color: var(--teal-deep); font-weight: 600; margin-top: 6px; }
+
+  /* Policy section */
+  .policy-list { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .policy-item {
+    background: #fff; border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0;
+    padding: 22px 26px; box-shadow: 0 2px 10px rgba(31,58,95,.04);
+  }
+  .policy-item h3 { font-size: 1.18rem; }
+  .policy-item .frame { font-size: .82rem; color: var(--teal-deep); text-transform: uppercase; letter-spacing: 1.2px; font-weight: 600; margin-bottom: 6px; }
+  .policy-item .legal {
+    margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--line);
+    font-size: .88rem; color: var(--muted);
+  }
+
+  /* Posters */
+  .poster-row { display: grid; grid-template-columns: 1fr; gap: 22px; }
+  @media (min-width: 760px) { .poster-row { grid-template-columns: 1fr 1fr; } }
+  .poster {
+    background: #fff; border: 1px solid var(--line); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 4px 18px rgba(31,58,95,.06);
+  }
+  .poster-frame {
+    aspect-ratio: 4/3; background: linear-gradient(135deg, var(--navy), var(--teal-deep));
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: #fff; padding: 30px; text-align: center;
+  }
+  .poster-frame .stamp { font-size: .72rem; letter-spacing: 1.6px; text-transform: uppercase; color: #f3e8c8; margin-bottom: 8px; }
+  .poster-frame h3 { color: #fff; font-size: 1.15rem; margin-bottom: 10px; max-width: 30ch; }
+  .poster-frame .conf { font-size: .85rem; color: rgba(255,255,255,.75); }
+  .poster-body { padding: 22px 24px; }
+  .poster-body p { margin: 0 0 10px; font-size: .94rem; }
+  .poster-body .keywords { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+
+  /* Contact */
+  .contact {
+    background: var(--navy);
+    color: #fff;
+    margin: 0; max-width: none;
+    padding: 80px 28px;
+  }
+  .contact .inner { max-width: 1100px; margin: 0 auto; }
+  .contact h2 { color: #fff; }
+  .contact .eyebrow-section { color: #f3e8c8; }
+  .contact .lede { color: rgba(255,255,255,.85); font-size: 1.1rem; max-width: 60ch; margin-bottom: 28px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 540px; }
+  .contact-item {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14);
+    border-radius: 8px; padding: 14px 18px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 6px;
+  }
+  .contact-item span { color: rgba(255,255,255,.6); font-size: .85rem; letter-spacing: 1.1px; text-transform: uppercase; font-weight: 500; }
+  .contact-item a, .contact-item .val { color: #f3e8c8; font-weight: 500; text-decoration: none; }
+  .contact-item a:hover { color: #fff; text-decoration: underline; }
+
+  footer { padding: 28px; text-align: center; color: var(--muted); font-size: .85rem; background: var(--cream); border-top: 1px solid var(--line); }
+
+  /* Print friendliness */
+  @media print {
+    nav { display: none; }
+    .hero { background: #fff; color: var(--ink); padding: 30px 0; }
+    .hero h1, .hero .role, .hero .lede { color: var(--ink); }
+    .contact { background: #fff; color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="brand">Shomrita Barua, BDS, MPH(c)</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#capstone">Capstone</a>
+      <a href="#infographics">Visual Materials</a>
+      <a href="#policy">Policy Writing</a>
+      <a href="#posters">Posters</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Public Health · Health Policy · Health Equity</span>
+      <h1>Translating evidence into equitable, culturally responsive public health.</h1>
+      <p class="role">Bilingual researcher and policy analyst working with refugee, immigrant, and LEP communities.</p>
+      <p class="lede">My work sits at the intersection of community-based research, language access policy, and culturally responsive health communication. I believe data, lived experience, and good design together can move public health systems toward equity.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="Shomrita_Barua_PublicHealth_Policy_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <a class="btn btn-ghost" href="#capstone">View Capstone</a>
+      </div>
+    </div>
+    <aside class="id-card">
+      <h4>At a Glance</h4>
+      <div class="row"><span>Education</span><span>MPH, UConn (2026)</span></div>
+      <div class="row"><span>Prior Degree</span><span>BDS · MPH (NIPSOM)</span></div>
+      <div class="row"><span>Focus</span><span>Health equity & policy</span></div>
+      <div class="row"><span>Location</span><span>Farmington, CT</span></div>
+      <div class="row"><span>Languages</span><span>EN · BN · HI · UR</span></div>
+      <div class="row"><span>Contact</span><a href="mailto:baruashomrita@gmail.com">Email</a></div>
+    </aside>
+  </div>
+</header>
+
+<!-- ============== ABOUT ============== -->
+<section id="about">
+  <div class="eyebrow-section">About</div>
+  <div class="section-title"><h2>A clinician turned policy-minded researcher.</h2></div>
+  <p class="section-lede">My path moved from chairside care in Bangladesh to community health in Connecticut — but the question stayed the same: how do we close the gap between the care people need and the care they actually receive?</p>
+  <div class="about-grid">
+    <div>
+      <p>I trained as a dentist (BDS, University of Chittagong) and earned my first MPH at the National Institute of Preventive and Social Medicine in Bangladesh, where I supported the national COVID-19 response, telehealth, and policy reporting at the Directorate General of Health Services. Those years taught me how policy decisions ripple through frontline care — especially for marginalized communities.</p>
+      <p>At the University of Connecticut (MPH, 2026), I have focused that lens on health equity in the United States. My practicum at the Connecticut Department of Public Health centered on refugee and immigrant health, and my current internship advances language access for Limited English Proficient (LEP) populations under federal civil rights frameworks (Title VI, EO 13166). My capstone examines mental health service utilization among South Asian immigrants — a community I belong to and a topic where the gap between need and access is striking.</p>
+      <p>Across this work, I bring three habits: <strong>community-based listening</strong> (I learn from people, not just literature), <strong>policy literacy</strong> (I read the law and ask what it means in clinic), and <strong>visual translation</strong> (I turn evidence into infographics, posters, and tools that communities and decision-makers actually use).</p>
+    </div>
+    <aside class="pillars">
+      <h4>What I do well</h4>
+      <ul>
+        <li>Policy & public health law analysis</li>
+        <li>Language access & LEP programming</li>
+        <li>Community-based participatory research</li>
+        <li>Mixed-methods & systematic reviews</li>
+        <li>Stakeholder & key-informant interviews</li>
+        <li>Visual education design (infographics, posters)</li>
+        <li>Culturally responsive health communication</li>
+        <li>Multilingual outreach (EN, BN, HI, UR)</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ============== CAPSTONE ============== -->
+<section id="capstone">
+  <div class="eyebrow-section">MPH Capstone · 2025–2026</div>
+  <div class="section-title"><h2>Mental Health Service Utilization Among South Asian Immigrants in the U.S.</h2></div>
+  <p class="section-lede">An evidence synthesis examining cultural, structural, and policy-level barriers to mental health care for South Asian immigrants — and what culturally responsive systems could look like.</p>
+
+  <article class="capstone">
+    <div class="meta">
+      <span class="tag">Health Equity</span>
+      <span class="tag">Mental Health</span>
+      <span class="tag accent">Immigrant Health</span>
+      <span class="tag">Cultural Competence</span>
+      <span class="tag accent">Language Access</span>
+      <span class="tag">Policy Analysis</span>
+    </div>
+
+    <h3 style="margin-bottom:10px;">Why this question matters</h3>
+    <p>South Asian Americans are one of the fastest-growing immigrant communities in the U.S., yet remain among the lowest utilizers of formal mental health services. National data and community studies point to a pattern: real psychological distress is met with stigma, language barriers, and a workforce that rarely reflects clients' cultural frames of meaning. Behind those individual experiences sit policy and system choices — what gets reimbursed, who gets credentialed, and which languages a clinic serves.</p>
+
+    <div class="capstone-grid">
+      <div class="capstone-block">
+        <h4>Approach</h4>
+        <ul>
+          <li>Mixed-methods synthesis of peer-reviewed literature and grey literature on South Asian immigrant mental health utilization in the U.S.</li>
+          <li>Analysis of barriers organized at three levels — individual/cultural, provider/clinical, and structural/policy.</li>
+          <li>Review of language access policy (Title VI of the Civil Rights Act, Executive Order 13166, CMS LEP guidance) and its on-the-ground implementation gaps.</li>
+          <li>Mapping of culturally responsive service delivery models with implications for community-based organizations and state Departments of Public Health.</li>
+        </ul>
+      </div>
+      <div class="capstone-block">
+        <h4>Key themes emerging</h4>
+        <ul>
+          <li><strong>Stigma as a public-health concern</strong> — not a private one — that systems can either reinforce or actively dismantle through community partnership.</li>
+          <li><strong>Language access</strong> remains the single most modifiable structural barrier; policy exists, but enforcement and provider-level practice lag.</li>
+          <li><strong>Cultural competence is not optional training</strong>: it shapes whether clients return after a first visit.</li>
+          <li><strong>Trust is built upstream</strong> — through schools, faith institutions, and primary care — long before a mental health referral.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:28px;">Policy & practice implications I am developing</h3>
+    <p>The capstone closes with recommendations targeted at three audiences: <em>state health agencies</em> (language access enforcement, workforce diversity pipelines), <em>community-based organizations</em> (peer-led models, faith-based partnerships, multilingual psychoeducation), and <em>clinical training programs</em> (cultural humility curricula that move beyond a single lecture). The visual materials in the next section come directly from this work.</p>
+  </article>
+</section>
+
+<!-- ============== INFOGRAPHICS ============== -->
+<section id="infographics">
+  <div class="eyebrow-section">Visual Health Communication</div>
+  <div class="section-title"><h2>Infographics & Community Education Resources</h2></div>
+  <p class="section-lede">Original visual materials I have designed to translate research into something a community member, a clinician, or a state-agency reviewer can actually use. Built primarily in Canva and refined for cultural and linguistic accessibility.</p>
+
+  <div class="cards">
+    <a class="card" href="assets/breaking-silence.jpg" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+      <div class="visual"><img src="assets/breaking-silence.jpg" alt="Breaking the Silence infographic on South Asian mental health" loading="lazy"/></div>
+      <span class="meta-line">Capstone-aligned · April 2026</span>
+      <h3>Breaking the Silence: Mental Health in South Asian Families</h3>
+      <p class="desc">An original multi-panel infographic translating stigma research into family-facing language, designed for community events and faith-based settings. Addresses common myths, signs of distress, and how to start a conversation across generations.</p>
+      <span class="card-cta">View full image →</span>
+    </a>
+
+    <div class="card">
+      <div class="visual v2">Language Access<br>at the Front Desk</div>
+      <span class="meta-line">LEP Workshop Project</span>
+      <h3>Your Right to an Interpreter</h3>
+      <p class="desc">A patient-facing poster outlining federal language access rights under Title VI and EO 13166 — including how to request a qualified interpreter and what "meaningful access" means in practice.</p>
+      <span class="card-cta">Available on request →</span>
+    </div>
+
+    <div class="card">
+      <div class="visual v3">Refugee Health<br>Pathway Map</div>
+      <span class="meta-line">CT DPH Practicum</span>
+      <h3>Connecticut Refugee Health Pathway</h3>
+      <p class="desc">A systems-level visualization of the refugee health screening and follow-up process across CT — used to communicate findings from cross-jurisdictional analysis to interagency partners.</p>
+      <span class="card-cta">Available on request →</span>
+    </div>
+
+    <a class="card" href="assets/cpha-wic-poster.pdf" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+      <div class="visual v4">Food, Family,<br>and Farmers Markets</div>
+      <span class="meta-line">CPHA 2024 Conference Poster</span>
+      <h3>Caretakers' Shopping Patterns — WIC Pilot</h3>
+      <p class="desc">A community-based pilot study summarizing farmers market benefit usage among caretakers of overweight/obese children in the Hartford WIC program. Presented at the 2024 CT Public Health Association Annual Conference.</p>
+      <span class="card-cta">View poster (PDF) →</span>
+    </a>
+
+    <a class="card" href="assets/south-asian-mental-health.jpg" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+      <div class="visual"><img src="assets/south-asian-mental-health.jpg" alt="South Asian Mental Health visual education resource" loading="lazy"/></div>
+      <span class="meta-line">Community education</span>
+      <h3>South Asian Mental Health: A Visual Primer</h3>
+      <p class="desc">A culturally tailored visual education piece introducing key mental health concepts to South Asian community audiences. Designed to lower stigma, normalize help-seeking, and signpost culturally responsive care pathways.</p>
+      <span class="card-cta">View full image →</span>
+    </a>
+
+    <div class="card">
+      <div class="visual v6">Oral Health<br>Equity Brief</div>
+      <span class="meta-line">Bangladesh research</span>
+      <h3>Oral Health Among Tribal Elderly</h3>
+      <p class="desc">A visual abstract drawn from my peer-reviewed work on oral health vulnerability among indigenous elderly populations in Bangladesh — adapted for both clinical and community audiences.</p>
+      <span class="card-cta">View publication →</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== POLICY ============== -->
+<section id="policy">
+  <div class="eyebrow-section">Policy Analysis & Writing</div>
+  <div class="section-title"><h2>Selected Policy & Public Health Law Work</h2></div>
+  <p class="section-lede">Briefs and analyses where I sit with the statute, the implementation, and the equity gap in between. Full writing samples are available on request.</p>
+
+  <div class="policy-list">
+    <article class="policy-item">
+      <div class="frame">Language Access Policy</div>
+      <h3>Implementation Gaps in Title VI &amp; EO 13166 for LEP Patient Populations</h3>
+      <p>An analytic review of how federal language access requirements translate (or fail to translate) into clinical practice for Limited English Proficient (LEP) patients. Examines the divergence between policy on paper and the lived experience at the registration desk, in the exam room, and in mental health settings — where qualified interpreters are still inconsistently available.</p>
+      <div class="legal">Frameworks reviewed: Title VI of the Civil Rights Act of 1964 · Executive Order 13166 · CMS LEP guidance · HHS Office for Civil Rights enforcement actions.</div>
+    </article>
+
+    <article class="policy-item">
+      <div class="frame">Refugee &amp; Immigrant Health</div>
+      <h3>Comparative Cross-Jurisdictional Analysis: State DPH Refugee Health Programs</h3>
+      <p>Conducted at the Connecticut Department of Public Health, this analysis compares refugee health screening, follow-up, and referral practices across multiple state DPH programs to surface best practices, equity gaps, and policy recommendations. Included key informant interviews and synthesis of program data into actionable findings for interagency partners.</p>
+      <div class="legal">Methods: cross-site comparison · stakeholder interviews · qualitative coding · systems mapping.</div>
+    </article>
+
+    <article class="policy-item">
+      <div class="frame">Mental Health &amp; Cultural Competence</div>
+      <h3>Culturally Responsive Mental Health Service Delivery for South Asian Immigrants</h3>
+      <p>Capstone-derived policy memo synthesizing evidence on mental health utilization barriers and proposing service-design changes for state agencies, CBOs, and clinical training programs. Argues that "cultural competence" must be operationalized at the system level — not delegated to individual clinicians.</p>
+      <div class="legal">Audience: state DPH leadership · CBOs serving South Asian communities · clinical training programs.</div>
+    </article>
+
+    <article class="policy-item">
+      <div class="frame">Substance Use Policy</div>
+      <h3>Medicinal Cannabis Use, Side Effects, and Legalization Policy in Cancer Care</h3>
+      <p>An evidence synthesis project examining the intersection of clinical use, side-effect profiles, and the patchwork of state and federal cannabis policy as it affects cancer patients. Highlights how legal status creates downstream effects on access, provider counseling, and patient autonomy.</p>
+    </article>
+
+    <article class="policy-item">
+      <div class="frame">Workforce &amp; Health Equity</div>
+      <h3>CT DPH Public Health Workforce Pipeline — Stakeholder Engagement</h3>
+      <p>Designed key informant interview instruments and supported stakeholder communication for a workforce pipeline initiative aimed at diversifying Connecticut's public health workforce. Centered equity, accessibility, and the structural drivers of underrepresentation in public-health careers.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============== POSTERS ============== -->
+<section id="posters">
+  <div class="eyebrow-section">Posters &amp; Presentations</div>
+  <div class="section-title"><h2>Conference &amp; Research Presentations</h2></div>
+  <p class="section-lede">Selected scientific posters and presentations drawn from community-based and policy-oriented projects.</p>
+
+  <div class="poster-row">
+    <div class="poster">
+      <div class="poster-frame">
+        <div class="stamp">Conference Poster · 2024</div>
+        <h3>Caretakers' Fruit and Vegetable Shopping Patterns</h3>
+        <div class="conf">CT Public Health Association Annual Conference</div>
+      </div>
+      <div class="poster-body">
+        <p>A community-based pilot study to strengthen farmers market benefits among caretakers of overweight/obese children ages 2–5 in the Hartford WIC program. Examined shopping patterns, perceived barriers, and program touchpoints.</p>
+        <div class="keywords">
+          <span class="tag">Food security</span>
+          <span class="tag accent">WIC</span>
+          <span class="tag">Childhood obesity</span>
+          <span class="tag accent">CBPR</span>
+        </div>
+        <p style="margin-top:12px;"><a href="assets/cpha-wic-poster.pdf" target="_blank" rel="noopener">View the full poster (PDF) →</a></p>
+      </div>
+    </div>
+
+    <div class="poster">
+      <div class="poster-frame">
+        <div class="stamp">Capstone Presentation · 2026</div>
+        <h3>Mental Health Service Utilization Among South Asian Immigrants</h3>
+        <div class="conf">UConn MPH Capstone Symposium</div>
+      </div>
+      <div class="poster-body">
+        <p>A synthesis of cultural, clinical, and policy-level barriers to mental health care, with policy and practice recommendations for state agencies, CBOs, and clinical training programs.</p>
+        <div class="keywords">
+          <span class="tag">Mental health</span>
+          <span class="tag accent">South Asian</span>
+          <span class="tag">Stigma</span>
+          <span class="tag accent">Language access</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="poster">
+      <div class="poster-frame">
+        <div class="stamp">Peer-Reviewed · 2024</div>
+        <h3>Oral Health Vulnerability Among Tribal Elderly in Bangladesh</h3>
+        <div class="conf">Global Biosecurity</div>
+      </div>
+      <div class="poster-body">
+        <p>First-author peer-reviewed publication from a primary pilot initiative of the national oral health survey, examining oral health vulnerability and associated risk factors among an indigenous elderly population.</p>
+        <div class="keywords">
+          <span class="tag">Oral health</span>
+          <span class="tag accent">Indigenous health</span>
+          <span class="tag">Disparities</span>
+        </div>
+        <p style="margin-top:12px;"><a href="https://doi.org/10.31646/gbio.232" target="_blank" rel="noopener">Read the article →</a></p>
+      </div>
+    </div>
+
+    <div class="poster">
+      <div class="poster-frame">
+        <div class="stamp">Peer-Reviewed · 2021</div>
+        <h3>COVID-19 Doubling Time in Bangladesh</h3>
+        <div class="conf">Global Biosecurity</div>
+      </div>
+      <div class="poster-body">
+        <p>Co-authored peer-reviewed analysis estimating and predicting doubling time for the COVID-19 epidemic in Bangladesh across the first 14 months of the pandemic, drawn from frontline COVID-19 response work.</p>
+        <div class="keywords">
+          <span class="tag">Epidemiology</span>
+          <span class="tag accent">COVID-19</span>
+          <span class="tag">Pandemic preparedness</span>
+        </div>
+        <p style="margin-top:12px;"><a href="https://doi.org/10.31646/gbio.91" target="_blank" rel="noopener">Read the article →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section id="contact" class="contact">
+  <div class="inner">
+    <div class="eyebrow-section">Get in Touch</div>
+    <h2>Open to roles in policy analysis, health equity research, and community-based public health.</h2>
+    <p class="lede">I am especially interested in positions where I can pair rigorous evidence work with culturally responsive practice — at state and federal health agencies, foundations, advocacy organizations, and academic centers focused on immigrant, refugee, and LEP populations.</p>
+    <div class="contact-grid">
+      <div class="contact-item"><span>Email</span><a href="mailto:baruashomrita@gmail.com">baruashomrita@gmail.com</a></div>
+      <div class="contact-item"><span>Phone</span><span class="val">(+1) 772-258-9513</span></div>
+      <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/shomrita-barua-6631b22b1" target="_blank" rel="noopener">shomrita-barua</a></div>
+      <div class="contact-item"><span>Location</span><span class="val">Farmington, CT</span></div>
+      <div class="contact-item"><span>Resume</span><a href="Shomrita_Barua_PublicHealth_Policy_Resume.pdf" target="_blank" rel="noopener">Download PDF →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> Shomrita Barua · Built with care for public health & equity
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
+d LEP populations.</p>
+    <div class="contact-grid">
+      <div class="contact-item"><span>Email</span><a href="mailto:baruashomrita@gmail.com">baruashomrita@gmail.com</a></div>
+      <div class="contact-item"><span>Phone</span><span class="val">(+1) 772-258-9513</span></div>
+      <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/shomrita-barua-6631b22b1" target="_blank" rel="noopener">shomrita-barua</a></div>
+      <div class="contact-item"><span>Location</span><span class="val">Farmington, CT</span></div>
+      <div class="contact-item"><span>Resume</span><a href="Shomrita_Barua_PublicHealth_Policy_Resume.pdf" target="_blank" rel="noopener">Download PDF →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> Shomrita Barua · Built with care for public health & equity
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
